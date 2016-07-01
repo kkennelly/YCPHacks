@@ -1,0 +1,17 @@
+#fountain{
+z-index:1;
+position:absolute;
+opacity:.7;
+left:-10%;
+top:-30%;
+width:125%;
+}
+#text{
+position:relative;
+z-index:100;
+}
+
+#button{
+position:relative;
+z-index:100;
+}
