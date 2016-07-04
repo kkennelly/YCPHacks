@@ -29,13 +29,26 @@
 }
 
 #text{
-position:relative;
-z-index:100;
-color: white;
-text-shadow: 1px 1px #555555;
+	position:relative;
+	z-index:100;
+	color: white;
+	text-shadow: 1px 1px #555555;
 }
 
 #button{
-position:relative;
-z-index:100;
+	position:relative;
+	z-index:100;
+}
+
+#wtot {
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	line-height: 1.1;
+	text-shadow: none;
+}
+
+#wtot:hover 
+{
+	color: #1abc9c;
 }
