@@ -22,17 +22,26 @@
 		left:-10%;
 		top:-30%;
 		width:125%;
+		overflow-x: hidden;
+ 	    overflow:hidden;
+   		display:block;
 		}
 		#fountain{
 			display: none;
 		}	
 }
 
+
+
+
 #text{
 position:relative;
 z-index:100;
 color: white;
+<<<<<<< Updated upstream
 text-shadow: 1px 1px #555555;
+=======
+>>>>>>> Stashed changes
 }
 
 #button{
