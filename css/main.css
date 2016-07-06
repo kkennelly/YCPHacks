@@ -12,6 +12,9 @@
 		height: 95%;
 		display: inline;
 		}
+	.desaturate {
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width:901px) {
@@ -26,6 +29,16 @@
 		#fountain{
 			display: none;
 		}	
+		
+		.desaturate {
+			opacity: 0.3;
+			-webkit-transition: .25s ease-in-out;
+			transition: .25s ease-in-out;
+		}
+
+		.desaturate:hover {
+			opacity: 1;
+		}
 }
 
 #text{
@@ -54,17 +67,3 @@
 }
 
 
-.desaturate {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: gray;
-	opacity: 0.3;
-	-webkit-transition: .4s ease-in-out;
-	transition: .4s ease-in-out;
-}
-
-.desaturate:hover {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);	
-	opacity: 1;
-}
