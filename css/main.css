@@ -52,3 +52,19 @@
 {
 	color: #1abc9c;
 }
+
+
+.desaturate {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+	opacity: 0.3;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+
+.desaturate:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);	
+	opacity: 1;
+}
