@@ -33,13 +33,12 @@
 		.desaturate {
 			opacity: 0.3;
 			-webkit-transition: .2s ease-in-out;
-			transition: .2s ease-in-out;
-			image-rendering: crisp-edges;
+			transition: all .1s ease;
 		}
 
 		.desaturate:hover {
 			opacity: 1;
-			image-rendering: crisp-edges;
+			z-index:1;
 		}
 }
 
