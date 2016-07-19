@@ -159,6 +159,7 @@
 	
 	#header-1 .navbar-fixed-top {
 		position: relative;
+		height:8px;
 	}
 	
 	#header-1 .navbar-collapse {
