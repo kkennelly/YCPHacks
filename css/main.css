@@ -12,6 +12,9 @@
 		height: 95%;
 		display: inline;
 		}
+	.desaturate {
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width:901px) {
@@ -29,22 +32,46 @@
 		#fountain{
 			display: none;
 		}	
+		
+		.desaturate {
+			opacity: 0.3;
+			-webkit-transition: .2s ease-in-out;
+			transition: all .1s ease;
+		}
+
+		.desaturate:hover {
+			opacity: 1;
+			z-index:1;
+		}
 }
 
 
 
 
 #text{
-position:relative;
-z-index:100;
-color: white;
-<<<<<<< Updated upstream
 text-shadow: 1px 1px #555555;
-=======
->>>>>>> Stashed changes
+	position:relative;
+	z-index:100;
+	color: white;
+	text-shadow: 1px 1px #555555;
 }
 
 #button{
-position:relative;
-z-index:100;
+	position:relative;
+	z-index:100;
 }
+
+#wtot {
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	line-height: 1.1;
+	text-shadow: none;
+}
+
+#wtot:hover 
+{
+	color: #1abc9c;
+}
+
+
