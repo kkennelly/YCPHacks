@@ -15,6 +15,17 @@
 	.desaturate {
 		opacity: 1;
 	}
+
+	.mlh {
+			display:block;
+			max-width:100px;
+			min-width:60px;
+			position: absolute;
+			left:15px;
+			top:0;
+			width:10%;
+			z-index:10000;
+		}
 }
 
 @media screen and (min-width:901px) {
@@ -28,8 +39,8 @@
 		}
 		#fountain{
 			display: none;
-		}	
-		
+		}
+
 		.desaturate {
 			opacity: 0.3;
 			-webkit-transition: .2s ease-in-out;
@@ -39,6 +50,17 @@
 		.desaturate:hover {
 			opacity: 1;
 			z-index:1;
+		}
+
+		.mlh {
+			display:block;
+			max-width:100px;
+			min-width:60px;
+			position:fixed;
+			right:20px;
+			top:0;
+			width:10%;
+			z-index:10000;
 		}
 }
 
@@ -62,9 +84,8 @@
 	text-shadow: none;
 }
 
-#wtot:hover 
+#wtot:hover
 {
 	color: #1abc9c;
 }
-
 
