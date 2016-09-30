@@ -141,70 +141,7 @@
 						
 				    };
 				
-				/*
-				$.ajax({
-					type: 'GET',
-					url: '/ajax/map?s=' + s,
-					success: function (response) {
-						var res = JSON.parse(response);
-						$.each(res, function(i, item) {
-							
-							var myLatlng = new google.maps.LatLng(res[i].lat,res[i].lon);
-							
-							var distance = getDistance(39.962649, -76.725798, res[i].lat, res[i].lon );
-							
-							if( distance <= 50 ) {
-								var pinColor = "69fe75";
-								stu50 += parseInt(res[i].students);
-							} else if( distance <= 150 ){
-								var pinColor = "F2FE69";
-								stu100 += parseInt(res[i].students);
-							} else {
-								var pinColor = "FE7569";
-								stuElse += parseInt(res[i].students);
-							}
-							
-							var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
-								    new google.maps.Size(2000, 2000),
-								    new google.maps.Point(0,0),
-								    new google.maps.Point(10, 34));
-							
-							//var marker = new google.maps.Marker({
-							markers[i] = new google.maps.Marker({
-						          position: myLatlng,
-						          icon: pinImage,
-						          map: map,
-						          title: res[i].School
-						        });
-							
-							markers[i].info = new google.maps.InfoWindow({
-							    content: '<b>'+ res[i].School +'</b><br>Students: ' + res[i].students,
-							    position: new google.maps.LatLng(parseFloat(res[i].lat)+0.0005,res[i].lon),
-							    minWidth: 400,
-							    maxWidth: 400
-							});
-							
-							google.maps.event.addListener(markers[i],'mouseover', function() {
-								var marker_map = this.getMap();
-								
-							    this.info.open(marker_map);
-							});	
-							
-							
-							google.maps.event.addListener(markers[i],'mouseout', function() {
-								var marker_map = this.getMap();
-								
-							    this.info.close();
-							});	
-							
-							markers[i].setMap(map);
-						});
-						
-				    },
-				    error: function(msg) {
-				    	alert(msg.responseText);
-				    }
-				});*/
+				
 			
 			function CenterControl(controlDiv, map) {
 
@@ -229,7 +166,7 @@
 		        controlText.style.paddingLeft = '15px';
 		        controlText.style.paddingRight = '15px';
 		        
-		        	controlText.innerHTML = 'Confirmed Students';
+		        	controlText.innerHTML = 'Registered Students';
 		        
 		        
 		        controlUI.appendChild(controlText);
