@@ -83,7 +83,7 @@
 				if( s == 1 ) {
 					var res = confirmed;
 				} else {
-					var res = registered
+					var res = registered;
 				}
 				
 				$.each(res, function(i, item) {
@@ -108,7 +108,6 @@
 								    new google.maps.Point(0,0),
 								    new google.maps.Point(10, 34));
 							
-							//var marker = new google.maps.Marker({
 							markers[i] = new google.maps.Marker({
 						          position: myLatlng,
 						          icon: pinImage,
