@@ -89,3 +89,14 @@
 	color: #1abc9c;
 }
 
+table tr.sponsorTable > td {
+	width: 400px;
+	text-align: center;
+	padding-bottom: 1em;
+
+}
+
+.sponsorTableDiv {
+	margin:auto;
+	width:70%;
+}
