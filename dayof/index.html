@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Thank you HackMIT Team! --> 
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>YCP Hacks Day Of Info</title>
+  <link rel="icon"
+        type="image/png"
+        href="assets/img/hack-logo-favicon-2016.png">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+
+  <!-- events data -->
+  <script src="assets/js/ycphacks_events.js"></script>
+  <script src="assets/js/schedule.js"></script>
+
+  <!-- current events logic 
+  <script src="assets/js/current_events.js"></script>-->
+
+  <!-- Include Semantic-UI -->
+  <script src="assets/js/semantic.min.js"></script>
+  <link href="assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+
+  <!-- for Facebook -->
+  <meta property="og:title" content="YCP Hacks 2016"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content="http://ycphacks.org"/>
+  <meta property="og:description" content="HackMIT Day Of Information"/>
+
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ycphacks">
+  <meta name="twitter:title" content="YCPHACKS 2016">
+
+
+  
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="assets/js/base.js"></script>
+</head>
+
+<body>
+
+<div class="ui page dimmer">
+  <div class="content">
+    <div class="center">
+      <h1></h1>
+      <h2></h2>
+    </div>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="ui secondary pointing menu">
+    <a class="logo montserrat bold item" href="http://ycphacks.io">
+      <img class="hacksquare" src="assets/img/blacklogo.png">
+    </a>
+    <a class="item active" href="index.html">
+      <i class="home icon"></i>
+      Day Of
+    </a>
+    <a class="item" href="#">
+      <i class="map icon"></i>
+      Maps
+    </a>
+    <a class="item" href="#">
+      <i class="calendar icon"></i>
+      Schedule
+    </a>
+    <a class="item" href="#">
+      <i class="trophy icon"></i>
+      Prizes
+    </a>
+    <a class="item" href="#">
+      <i class="user icon"></i>
+      Speakers
+    </a>
+    <a class="item" href="#">
+      <i class="rocket icon"></i>
+      Hardware List
+    </a>
+    <a class="item" href="#">
+      <i class="plane icon"></i>
+      Travel Info
+    </a>
+    <a class="item" href="#">
+      <i class="question icon"></i>
+      FAQs
+    </a>
+  </div>
+</div>
+
+<div id="banner">
+  <div class="content">
+    WELCOME TO YCP HACKS
+  </div>
+</div>
+
+<div id="home" class="main">
+  <div class="ui stackable page grid">
+    <div class="sixteen wide column" id="current-events-cont"
+         style="display: none !important;">
+      <table class="ui table segment current-events-table">
+        <tbody id="current-events-tbody">
+          <tr>
+            <td class="active current-events" colspan="4">
+              <h1>Current events</h1>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	
+	<div id="contacts-column" class="eight wide column">
+      <div class="ui segment top attached inverted">
+        <h1>Tweets</h1>
+      </div>
+		<div style="height:400px;">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=%40ycphacks" data-widget-id="785613678481543168">Tweets about @ycphacks</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div> 
+    </div>
+	
+	<div class="ui stackable column page grid" style="min-width:900px;">
+    <!-- General Events -->
+    <div class="column" style="margin-top: 0px;">
+      <div class="ui segment top attached inverted" style="background-color:rgb(112,167,116);">
+        <h1>Schedule</h1>
+      </div>
+      <table class="ui table segment" style="margin-top:0px;">
+        <thead><tr>
+          <th>Start</th>
+          <th>End</th>
+          <th>Event</th>
+          <th>Location</th>
+        </tr></thead>
+        <tbody id="general-schedule">
+          <tr>
+            <td class="active" colspan="4">Friday</td>
+          </tr>
+          <!-- populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+	</div>
+
+   
+</div>
+</div>
+
+  <script>
+	  window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+		t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+	 
+	  t._e = [];
+	  t.ready = function(f) {
+		t._e.push(f);
+	  };
+	 
+	  return t;
+	}(document, "script", "twitter-wjs"));
+</script>
+
+</body>
+
+</html>
