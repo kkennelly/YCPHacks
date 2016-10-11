@@ -41,6 +41,20 @@ a {
   width: 5em;
 }
 
+.infoContent {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 20px;
+	border: solid 1px rgb(221,221,221);
+	border-radius: 5px;
+}
+
+.importantInfo {
+	padding-left: 7.2%;
+	padding-right: 7.6%;
+	
+}
+
 #home iframe
 {
   width: 100% !important;
