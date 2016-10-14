@@ -8,6 +8,7 @@ var YCPHacksScheduleGen = (function() {
     var FOOD = 2
     var FRI_MIDNIGHT = 24
 	var SAT_MIDNIGHT = 48
+	var START_DAY = 14; /* Day of the month to begin schedule */
 
     /**************
      * work funcs */
@@ -28,40 +29,40 @@ var YCPHacksScheduleGen = (function() {
                 eventLocation
             );
 			
-			
-
-            if (eventType == WORKSHOP) {
-				var desc = event[5];
-				var descRow = getWorkshopDescription(desc);
-                document.getElementById('workshop-schedule').appendChild(row);
-				document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(desc) );
-				document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(" ") );
-            } else {
-				// Saturday
-				if( start >= FRI_MIDNIGHT && !itisSaturday) {
-					var saturdayHeader = document.createElement('tr');
-					var saturdayCell = document.createElement('td');
-					saturdayCell.className = "active";
-					saturdayCell.colSpan = "4";
-					saturdayCell.innerHTML = "Saturday";
-					saturdayHeader.appendChild( saturdayCell );
-					document.getElementById('general-schedule').appendChild( saturdayHeader );
-					itisSaturday = true;					
+			if( !hasHappened(start) ) {
+				if (eventType == WORKSHOP) {
+					var desc = event[5];
+					var descRow = getWorkshopDescription(desc);
+					document.getElementById('workshop-schedule').appendChild(row);
+					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(desc) );
+					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(" ") );
+				} else {
+					// Saturday
+					if( start >= FRI_MIDNIGHT && !itisSaturday) {
+						var saturdayHeader = document.createElement('tr');
+						var saturdayCell = document.createElement('td');
+						saturdayCell.className = "active";
+						saturdayCell.colSpan = "4";
+						saturdayCell.innerHTML = "Saturday";
+						saturdayHeader.appendChild( saturdayCell );
+						document.getElementById('general-schedule').appendChild( saturdayHeader );
+						itisSaturday = true;					
+					}
+					
+					// Sunday
+					if (start >= SAT_MIDNIGHT && !itisSunday) {
+						var sundayHeader = document.createElement('tr');
+						var sundayCell = document.createElement('td');
+						sundayCell.className = "active";
+						sundayCell.colSpan = "4";
+						sundayCell.innerHTML = "Sunday";
+						sundayHeader.appendChild(sundayCell);
+						document.getElementById('general-schedule').appendChild(sundayHeader);
+						itisSunday = true;
+					}
+					document.getElementById('general-schedule').appendChild(row);
 				}
-				
-				// Sunday
-                if (start >= SAT_MIDNIGHT && !itisSunday) {
-                    var sundayHeader = document.createElement('tr');
-                    var sundayCell = document.createElement('td');
-                    sundayCell.className = "active";
-                    sundayCell.colSpan = "4";
-                    sundayCell.innerHTML = "Sunday";
-                    sundayHeader.appendChild(sundayCell);
-                    document.getElementById('general-schedule').appendChild(sundayHeader);
-                    itisSunday = true;
-                }
-                document.getElementById('general-schedule').appendChild(row);
-            }
+			}
         });
     }
 
@@ -106,6 +107,17 @@ var YCPHacksScheduleGen = (function() {
         if (min < 10) min = '0'+min;
         return hr + ':' + min + m;
     }
+	
+	function hasHappened( start ) {
+		var currentTime = new Date();
+		var curHour = currentTime.getHours() * ( (currentTime.getDate()+1)-START_DAY );
+		console.log( "Current hour: " + curHour );
+		if( start <= curHour ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
     return {
         init: initYCPHacksSchedule
