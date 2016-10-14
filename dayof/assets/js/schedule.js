@@ -111,7 +111,7 @@ var YCPHacksScheduleGen = (function() {
 	function hasHappened( start ) {
 		var currentTime = new Date();
 		var curHour = currentTime.getHours() * ( (currentTime.getDate()+1)-START_DAY );
-		console.log( "Current hour: " + curHour );
+		
 		if( start <= curHour ) {
 			return true;
 		} else {
