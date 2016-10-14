@@ -118,6 +118,11 @@ a {
   display: inline;
 }
 
+.classDescription {
+	height:50px;
+}
+
+
 
 #home iframe
 {

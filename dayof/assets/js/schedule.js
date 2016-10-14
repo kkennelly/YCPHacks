@@ -27,9 +27,15 @@ var YCPHacksScheduleGen = (function() {
                 description,
                 eventLocation
             );
+			
+			
 
             if (eventType == WORKSHOP) {
+				var desc = event[5];
+				var descRow = getWorkshopDescription(desc);
                 document.getElementById('workshop-schedule').appendChild(row);
+				document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(desc) );
+				document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(" ") );
             } else {
 				// Saturday
 				if( start >= FRI_MIDNIGHT && !itisSaturday) {
@@ -75,6 +81,21 @@ var YCPHacksScheduleGen = (function() {
         row.appendChild(locationCell);
         return row;
     }
+	
+	function getWorkshopDescription( desc ) {
+		var row = document.createElement('tr');
+		row.classList.add('classDescription');
+		
+		var description = document.createElement('td');
+		description.innerHTML = desc;
+		
+		
+		row.appendChild( document.createElement('td') );
+		row.appendChild( document.createElement('td') );
+		row.appendChild( description );
+		row.appendChild( document.createElement('td') );
+		return row;
+	}
 
     function formatTime(t) {
         t = parseFloat(t)%24;

@@ -15,7 +15,7 @@
  */
 var YCP_EVTS_YEAR = 2016;
 var YCP_EVTS = [
-    [18, 20, "Hacker Check-in", "Hotel Lobby", 0],
+    [18, 20, "Hacker Check-in", "Hotel Lobby", 0 ],
 	[18, 20, "Sponsor Check-in", "Hotel Lobby", 0 ],
 	[19, 20, "Dinner" , "United Fiber & Data Room", 0],
 	[21, 22, "Team Building Activities", "3rd Floor Rooms", 0],
@@ -25,9 +25,9 @@ var YCP_EVTS = [
 	[31, 33, "Breakfast", "United Fiber & Data Room", 0 ],
 	[33, 36, "Meet the Sponsors", "Hotel Lobby / Hallway", 0 ],
 	[36, 37.5, "Lunch", "United Fiber & Data Room", 0],
-	[37.5, 38.5, "iOS Development Workshop", "Lafeyette Room", 0],
-	[38.5, 40.5, "Sharktank", "Lafeyette Room", 0],
-	[40, 41.5, "Hardware Workshop", "TBD", 0 ],
+	[37.5, 38.5, "iOS Development Workshop", "Lafeyette Room", 1, " "],
+	[38.5, 40.5, "Sharktank", "Lafeyette Room", 1, "Dick Heddleson and Ross Gibson from The Ben Franklin Technology Partners will work with you to refine your project and show you the next steps to turn your idea into a business"],
+	[40, 41.5, "Hardware Workshop", "TBD", 1 , " "],
 	[42, 43.5, "Dinner", "United Fiber & Data Room", 0],
 	[44, 45, "Women In Tech Meetup", "Lafeyette Room", 0],
 	[45, 46, "Cup Stacking", "TBD", 0],
