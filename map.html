@@ -40,6 +40,43 @@
 		        
 		        centerControlDiv.index = 1;
 		        map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+				
+				
+				// Set Yorktowne Pin
+				var pinColor = "69fe75";
+				var myLatlng = new google.maps.LatLng( 39.962691, -76.725726 );
+				var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+								new google.maps.Size(4000, 4000),
+								new google.maps.Point(0,0),
+								new google.maps.Point(10, 34));
+							
+				var marker = new google.maps.Marker({
+						          position: myLatlng,
+						          icon: pinImage,
+						          map: map
+						        });
+							
+							marker.info = new google.maps.InfoWindow({
+							    content: '<b>The Yorktowne Hotel</b>',
+							    position: new google.maps.LatLng( 39.963191,-76.725726),
+							    minWidth: 400,
+							    maxWidth: 400
+							});
+							
+							google.maps.event.addListener(marker,'mouseover', function() {
+								var marker_map = this.getMap();
+								
+							    this.info.open(marker_map);
+							});	
+							
+							
+							google.maps.event.addListener(marker,'mouseout', function() {
+								var marker_map = this.getMap();
+								
+							    this.info.close();
+							});	
+							
+							marker.setMap(map);
 
 				
 				getConfirmed(2);
