@@ -5,6 +5,7 @@ input,
 button,
 textarea {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -125,6 +126,35 @@ a {
 	padding-right: 0px;
 }
 
+.YCCFDesc {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.PrizeTitle {
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	vertical-align: middle;
+}
+
+.PrizeTitleBlack {
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+	vertical-align: middle;
+}
+
+.PrizeSubTitle{
+	font-size: 20px;
+}
+
+.PrizeSubTitleBlack{
+	color: black;
+	font-size: 20px;
+}
+
 @media only screen and (max-width: 500px) {
     .infoContentLeft {
         width: 100%;
@@ -219,6 +249,14 @@ a {
 
 .classDescription {
 	height:50px;
+}
+
+.second {
+	background-color: rgb(124,131,134);
+}
+
+.third {
+	background-color: rgb(124,80,32);
 }
 
 
