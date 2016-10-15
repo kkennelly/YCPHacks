@@ -8,7 +8,7 @@ var YCPHacksScheduleGen = (function() {
     var FOOD = 2
     var FRI_MIDNIGHT = 24
 	var SAT_MIDNIGHT = 48
-	var START_DAY = 14; /* Day of the month to begin schedule */
+	var START_DAY = 15; /* Day of the month to begin schedule */
 
     /**************
      * work funcs */
@@ -29,7 +29,7 @@ var YCPHacksScheduleGen = (function() {
                 eventLocation
             );
 			
-			if( !hasHappened(start) ) {
+			if( !hasHappened(end) ) {
 				if (eventType == WORKSHOP) {
 					var desc = event[5];
 					var descRow = getWorkshopDescription(desc);
@@ -108,11 +108,11 @@ var YCPHacksScheduleGen = (function() {
         return hr + ':' + min + m;
     }
 	
-	function hasHappened( start ) {
+	function hasHappened( end ) {
 		var currentTime = new Date();
-		var curHour = currentTime.getHours() * ( (currentTime.getDate()+1)-START_DAY );
+		var curHour = (currentTime.getHours()+1) * ( (currentTime.getDate()+1)-START_DAY );
 		
-		if( start <= curHour ) {
+		if( end <= curHour ) {
 			return true;
 		} else {
 			return false;
