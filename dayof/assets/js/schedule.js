@@ -8,7 +8,7 @@ var YCPHacksScheduleGen = (function() {
     var FOOD = 2
     var FRI_MIDNIGHT = 24
 	var SAT_MIDNIGHT = 48
-	var START_DAY = 15; /* Day of the month to begin schedule */
+	var START_DAY = 21; /* Day of the month to begin schedule */
 
     /**************
      * work funcs */
