@@ -110,9 +110,9 @@ var YCPHacksScheduleGen = (function() {
 	
 	function hasHappened( end ) {
 		var currentTime = new Date();
-		var curHour = (currentTime.getHours()+1) * ( (currentTime.getDate()+1)-START_DAY );
+		var curHour = (currentTime.getHours()+1) + 24 * ( (currentTime.getDate())-START_DAY );
 		
-		if( end <= curHour ) {
+		if( end < curHour ) {
 			return true;
 		} else {
 			return false;
