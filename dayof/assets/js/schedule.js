@@ -14,7 +14,7 @@ var YCPHacksScheduleGen = (function() {
      * work funcs */
     function initYCPHacksSchedule() {
 		var itisSaturday = false;
-        var itisSunday = false;		
+        var itisSunday = false;
         YCP_EVTS.map(function(event) {
             var start = event[0];
             var end = event[1];
@@ -28,7 +28,7 @@ var YCPHacksScheduleGen = (function() {
                 description,
                 eventLocation
             );
-			
+
 			if( !hasHappened(end) ) {
 				if (eventType == WORKSHOP) {
 					var desc = event[5];
@@ -36,7 +36,7 @@ var YCPHacksScheduleGen = (function() {
 					document.getElementById('workshop-schedule').appendChild(row);
 					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(desc) );
 					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(" ") );
-				} else {
+				}
 					// Saturday
 					if( start >= FRI_MIDNIGHT && !itisSaturday) {
 						var saturdayHeader = document.createElement('tr');
@@ -46,9 +46,9 @@ var YCPHacksScheduleGen = (function() {
 						saturdayCell.innerHTML = "Saturday";
 						saturdayHeader.appendChild( saturdayCell );
 						document.getElementById('general-schedule').appendChild( saturdayHeader );
-						itisSaturday = true;					
+						itisSaturday = true;
 					}
-					
+
 					// Sunday
 					if (start >= SAT_MIDNIGHT && !itisSunday) {
 						var sundayHeader = document.createElement('tr');
@@ -61,7 +61,7 @@ var YCPHacksScheduleGen = (function() {
 						itisSunday = true;
 					}
 					document.getElementById('general-schedule').appendChild(row);
-				}
+
 			}
         });
     }
@@ -82,15 +82,15 @@ var YCPHacksScheduleGen = (function() {
         row.appendChild(locationCell);
         return row;
     }
-	
+
 	function getWorkshopDescription( desc ) {
 		var row = document.createElement('tr');
 		row.classList.add('classDescription');
-		
+
 		var description = document.createElement('td');
 		description.innerHTML = desc;
-		
-		
+
+
 		row.appendChild( document.createElement('td') );
 		row.appendChild( document.createElement('td') );
 		row.appendChild( description );
@@ -107,11 +107,11 @@ var YCPHacksScheduleGen = (function() {
         if (min < 10) min = '0'+min;
         return hr + ':' + min + m;
     }
-	
+
 	function hasHappened( end ) {
 		var currentTime = new Date();
 		var curHour = (currentTime.getHours()+1) + 24 * ( (currentTime.getDate())-START_DAY );
-		
+
 		if( end < curHour ) {
 			return true;
 		} else {
