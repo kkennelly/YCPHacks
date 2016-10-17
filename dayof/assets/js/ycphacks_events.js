@@ -18,6 +18,8 @@ var YCP_EVTS = [
     [18, 20, "Hacker Check-in", "Hotel Lobby", 0 ],
 	[18, 20, "Sponsor Check-in", "Hotel Lobby", 0 ],
 	[19, 20, "Dinner" , "United Fiber & Data Room", 0],
+	[20, 21, "Opening Ceremonies", "Main Ballroom", 0],
+	[21, 57, "Hacking Begins!", " ", 0 ],
 	[21, 22, "Team Building Activities", "3rd Floor Rooms", 0],
 	[22, 23, "Inspiration Activities", "3rd Floor Rooms", 0],
 	[23, 24, "Kahoot Trivia", "3rd Floor Rooms", 0],
