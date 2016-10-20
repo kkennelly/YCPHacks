@@ -36,7 +36,7 @@ var YCPHacksScheduleGen = (function() {
 					document.getElementById('workshop-schedule').appendChild(row);
 					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(desc) );
 					document.getElementById('workshop-schedule').appendChild( getWorkshopDescription(" ") );
-				}
+				} else {
 					// Saturday
 					if( start >= FRI_MIDNIGHT && !itisSaturday) {
 						var saturdayHeader = document.createElement('tr');
@@ -61,7 +61,7 @@ var YCPHacksScheduleGen = (function() {
 						itisSunday = true;
 					}
 					document.getElementById('general-schedule').appendChild(row);
-
+				}
 			}
         });
     }
