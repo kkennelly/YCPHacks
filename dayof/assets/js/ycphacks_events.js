@@ -41,8 +41,8 @@ var YCP_EVTS = [
   [47.5, 48.5, "Cyber Security Workshop", "Conestoga Room", 0],
 	[48, 49, "Midnight Snack", "United Fiber & Data Room", 0],
 	[55, 56, "Breakfast", "United Fiber & Data Room", 0],
-	[56, 57, "Submit Your Project!", "www.ycphacks2016.devpost.com", 0],
-  [57, 58, "Hacking Ends!", "", 0],
-	[57, 60, "Presentations & Judging", "Main Ballroom", 0],
+	[56, 58, "Submit Your Project!", "ycphacks2016.devpost.com", 0],
+  [57, 57, "Hacking Ends!", "", 0],
+	[58, 60, "Presentations & Judging", "Main Ballroom", 0],
 	[60, 61, "Closing Ceremonies", "Main Ballroom", 0]
 ];

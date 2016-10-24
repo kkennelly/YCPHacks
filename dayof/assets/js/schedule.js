@@ -112,11 +112,14 @@ var YCPHacksScheduleGen = (function() {
 		var currentTime = new Date();
 		var curHour = (currentTime.getHours()+1) + 24 * ( (currentTime.getDate())-START_DAY );
 
+    /* Event is over so just return false
 		if( end < curHour ) {
 			return true;
 		} else {
 			return false;
 		}
+    */
+    return false;
 	}
 
     return {
