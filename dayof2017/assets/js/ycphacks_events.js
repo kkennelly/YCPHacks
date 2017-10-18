@@ -28,7 +28,7 @@ var YCP_EVTS = [
 	[21, 21.5, "WTF (Where to Find) Workshop", "Room 310", 1, 'Felix and nick will talk about the basic places to find answers to development questions. The will also touch base on the resources we have provided for you at this event'],
 	[22, 23, "Arduino Tutorial", "Room 310", 0],									// 10pm - 11pm
 	[22, 23, "Arduino Tutorial", "Room 310", 1, "This is a workshop about the basics and more advanced features of the arduino. You can use these tools in your project or in the future!"],
-	[24, 25, "Midnight Nerf War", "TBD", 0],								//12am - 1am
+	[24, 25, "Midnight Nerf War", "Room 310", 0],								//12am - 1am
 	[26, 27, "Trivia/Text Games", "TBD", 0],								// 2am - 3am
 	[31, 33, "Breakfast", "Yorkview Hall", 2],								// 7am - 8am
 	[31, 32, "Yoga", "Room 408", 0],
