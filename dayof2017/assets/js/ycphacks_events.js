@@ -46,10 +46,8 @@ var YCP_EVTS = [
 	[42.5, 43, "Pi to High Rise", "Room 314", 0],
 	[42.5, 43, "Pi to High Rise", "Room 314", 1, "Dr. Norrie will give a lightning talk about how to take the basic skills you learned here, like functions of the Raspberry Pi, to create bigger and better things."],
 	[43, 44, "Dinner", "Yorkview Hall", 2 ],
-	
 	[46, 47, "So I Heard You Like Engineering...", "Weinstock Auditorium", 0],
 	[48, 49, "Midnight Whoopie Pies", "TBD", 0],
-	[48, 49, "Tutorial After the Pi(Data)", "TBD", 0],
 	[55, 57, "Breakfast", "Yorkview Hall", 2],
 	[57, 58, "Hacking Ends", "-", 0],
 	[57.182, 58, "Pitch Tutorial", "Room 408", 0],
